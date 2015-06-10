@@ -23,11 +23,17 @@
 			height:auto !important;
 		}
 		.panel-body{
-			height: 200px;
+			min-height: 300px;
 			background-color: #95D1D4;
+		}
+		.panel-body h1{
+			line-height: 300px;text-align: center;
 		}
 		#items {
 			font-size: 72px;
+		}
+		button{
+			margin-bottom: 5px !important;
 		}
 		</style>
 	</head>
@@ -42,7 +48,7 @@
 			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 				<div class="panel panel-primary">
 					  <div class="panel-body">
-							Drop Here...
+							<h1>Drop Here...</h1>
 					  </div>
 				</div>
 			</div>
