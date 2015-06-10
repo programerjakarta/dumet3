@@ -71,7 +71,7 @@
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			var counter = $("#items").text();
+			var counter = $("#items").text(); // untuk mangambil nilai awal
 			// alert(counter);
 			$("button").draggable({
 				"cancel":"true", 
@@ -85,7 +85,7 @@
 				"connectToSortable" : "button",
 				"helper":"clone",
 				drop: function(){
-					counter++;
+					counter++; //untuk menambah nilai awal
 					$(this).addClass('kuning2');
 					$("#total").text(counter);
 				}
