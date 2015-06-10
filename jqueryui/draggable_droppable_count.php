@@ -33,7 +33,14 @@
 			font-size: 72px;
 		}
 		button{
+			z-index: 999;
 			margin-bottom: 5px !important;
+		}
+		.kuning{
+			background-color: #FFEF47 !important;
+		}
+		.kuning2{
+			background-color: #FFA845 !important;
 		}
 		</style>
 	</head>
@@ -53,7 +60,7 @@
 				</div>
 			</div>
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-				<h1 id="items"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 0</h1>
+				<h1 id="items"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span id="total">0</span></h1>
 			</div>
 		</div>
 		
@@ -64,7 +71,25 @@
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			
+			var counter = $("#items").text();
+			// alert(counter);
+			$("button").draggable({
+				"cancel":"true", 
+				"revert" : "invalid", //untuk mengembalikan button jika tidak di drag ke tempat yang ditentukan
+				"activeClass" : "kuning",
+				"helper" : "clone"
+			});
+			$(".panel-body").droppable({
+				"activeClass" : "kuning2",
+				accept : "button",
+				"connectToSortable" : "button",
+				"helper":"clone",
+				drop: function(){
+					counter++;
+					$(this).addClass('kuning2');
+					$("#total").text(counter);
+				}
+			});
 		});
 		</script>
 	</body>
