@@ -25,6 +25,10 @@
 		.col-xs-4{
 			padding-top: 15px;
 		}
+		.well{
+			width: auto !important;
+			/*height:auto !important;*/
+		}
 		</style>
 	</head>
 	<body>
