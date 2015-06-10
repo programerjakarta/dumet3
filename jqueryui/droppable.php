@@ -42,6 +42,7 @@
 		<div class="container">
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			<button id="draggable" type="button" class="btn btn-primary">Drag Me</button>
+			<button id="draggable_danger" type="button" class="btn btn-danger">Drag Me</button>
 		</div>
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 			<div class="panel panel-primary">
@@ -65,10 +66,12 @@
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			$( "#draggable" ).draggable({
-				"cancel":"false" // agar button bisa di geser
+			$( "#draggable,#draggable_danger" ).draggable({
+				"cancel":"false", // agar button bisa di geser
+				"revert" :"invalid"
 			});
 			$( "#droppable" ).droppable({
+				accept : "#draggable",
 				drop: function(){
 					$(".panel-body").html("<strong>Good Job!</strong>");
 				}
