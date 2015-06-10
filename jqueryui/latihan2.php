@@ -31,6 +31,12 @@
 		.panel-body{
 			height: 200px;;
 		}
+		.kuning{
+			background-color: #99E1D9;
+		}
+		.ungu{
+			background-color: #F34CD5;
+		}
 		</style>
 	</head>
 	<body>
@@ -98,27 +104,31 @@
 				"revert" :"invalid"
 			});
 			$( "#droppable_apple" ).droppable({
+				activeClass:"kuning",
 				accept : "#apple",
 				drop: function(){
-					$(this).html("<strong>Good Job!</strong>");
+					$(this).html("<strong>Good Job!</strong>").css('color', 'white').addClass('ungu');
 				}
 			});
 			$( "#droppable_lg" ).droppable({
+				activeClass:"kuning",
 				accept : "#lg",
 				drop: function(){
-					$(this).html("<strong>Good Job!</strong>");
+					$(this).html("<strong>Good Job!</strong>").css('color', 'white').addClass('ungu');
 				}
 			});
 			$( "#droppable_sony" ).droppable({
+				activeClass:"kuning",
 				accept : "#sony",
 				drop: function(){
-					$(this).html("<strong>Good Job!</strong>");
+					$(this).html("<strong>Good Job!</strong>").css('color', 'white').addClass('ungu');
 				}
 			});
 			$( "#droppable_samsung" ).droppable({
+				activeClass:"kuning",
 				accept : "#samsung",
 				drop: function(){
-					$(this).html("<strong>Good Job!</strong>");
+					$(this).html("<strong>Good Job!</strong>").css('color', 'white').addClass('ungu');
 				}
 			});
 		});
