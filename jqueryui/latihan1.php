@@ -49,9 +49,9 @@
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 			</div>
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 connect2 sortable2" >
-				<div class="well">4. Lorem ipsum</div>
-				<div class="well">5. Lorem ipsum</div>
-				<div class="well">6. Lorem ipsum</div>
+				<div class="well">7. Lorem ipsum</div>
+				<div class="well">8. Lorem ipsum</div>
+				<div class="well">9. Lorem ipsum</div>
 			</div>
 		</div>
 		<div class="container">
@@ -72,9 +72,9 @@
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 			</div>
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 connect2 sortable2" >
-				<div class="well">4. Lorem ipsum</div>
-				<div class="well">5. Lorem ipsum</div>
-				<div class="well">6. Lorem ipsum</div>
+				<div class="well">7. Lorem ipsum</div>
+				<div class="well">8. Lorem ipsum</div>
+				<div class="well">9. Lorem ipsum</div>
 			</div>
 		</div>
 		<!-- jQuery -->
@@ -84,9 +84,15 @@
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 		jQuery(document).ready(function($) {
+			/**
+			 * Menghubungkan div dengan class sortable ke wadah div dengan class connect
+			 */
 			$( ".sortable1" ).sortable({
 				"connectWith":".connect"
 			});
+			/**
+			 * Menghubungkan div dengan class sortable2 ke wadah div dengan class connect2
+			 */
 			$( ".sortable2" ).sortable({
 				"connectWith":".connect2"
 			});
