@@ -19,21 +19,26 @@
 		.container{
 			margin-top: 30px;
 		}
+		.connect{
+			background:#FF6060;
+		}
+		.col-xs-4{
+			padding-top: 15px;
+		}
 		</style>
 	</head>
 	<body>
 		<h1 class="text-center">ProgramerJakarta</h1>
 		<div class="container">
-			<div class="col-xs-12" id="sortable">
-				<div class="well">1. Lorem</div>
-				<div class="well">2. Lorem</div>
-				<div class="well">3. Lorem</div>
-				<div class="well">4. Lorem</div>
-				<div class="well">5. Lorem</div>
-				<div class="well">6. Lorem</div>
-				<div class="well">7. Lorem</div>
-				<div class="well">8. Lorem</div>
-				<div class="well">9. Lorem</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 connect">
+				<div class="well" id="draggable">1. Lorem ipsum</div>
+			</div>
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 connect" id="sortable">
+				<div class="well">2. Lorem ipsum</div>
+				<div class="well">3. Lorem ipsum</div>
+				<div class="well">4. Lorem ipsum</div>
 			</div>
 		</div>
 		<!-- jQuery -->
@@ -43,7 +48,14 @@
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			$( "#sortable" ).sortable();
+			$( "#sortable" ).sortable({
+				"revert":"true"
+			});
+			$("#draggable").draggable({
+				"connectToSortable" : "#sortable",
+				"helper":"clone",
+				"revert":"invalid"
+			});
 		});
 		</script>
 	</body>
