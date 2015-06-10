@@ -81,13 +81,14 @@
 			});
 			$(".panel-body").droppable({
 				"activeClass" : "kuning2",
-				accept : "button",
+				"accept" : "button",
 				"connectToSortable" : "button",
-				"helper":"clone",
 				drop: function(){
 					counter++; //untuk menambah nilai awal
 					$(this).addClass('kuning2');
 					$("#total").text(counter);
+					$(this).find('h1').remove();
+					// $(ui.draggable).appendTo(this);
 				}
 			});
 		});
