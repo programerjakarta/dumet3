@@ -30,7 +30,7 @@
 		</style>
 	</head>
 	<body>
-		<h1 class="text-center">Hello World</h1>
+		<h1 class="text-center">ProgramerJakarta</h1>
 		<div class="container">
 			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
 			</div>
